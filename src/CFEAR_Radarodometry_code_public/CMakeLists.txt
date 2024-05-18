@@ -6,8 +6,8 @@ set(CMAKE_BUILD_TYPE release)
 
 
 ## If pcl not found
-#set(PCL_DIR "/usr/lib/x86_64-linux-gnu/cmake/pcl/")
-find_package(PCL  REQUIRED)
+# set(PCL_DIR "/usr/lib/x86_64-linux-gnu/cmake/pcl/")
+find_package(PCL REQUIRED PATHS /usr NO_DEFAULT_PATH)
 set(_include_dirs "include;/usr/include;/usr/include/opencv4")
 
 find_package(catkin REQUIRED COMPONENTS
