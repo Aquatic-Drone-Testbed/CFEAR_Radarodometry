@@ -5,9 +5,9 @@
     },
     "workspaceFolder": "/root/catkin_ws",    
     "workspaceMount": "source=${localWorkspaceFolder},target=/root/catkin_ws,type=bind",
-    "mounts": [
-        "source=${localEnv:HOME}/Documents/tbv-bag,target=/BAG_LOCATION,type=bind,consistency=cached"
-    ],
+    // "mounts": [
+    //     "source=${localEnv:HOME}/Documents/tbv-bag,target=/BAG_LOCATION,type=bind,consistency=cached"
+    // ],
     "customizations": {
         "vscode": {
             "extensions":[
