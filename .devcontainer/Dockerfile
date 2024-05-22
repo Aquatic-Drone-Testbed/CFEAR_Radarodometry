@@ -11,7 +11,7 @@ RUN tar zxf ceres-solver-2.1.0.tar.gz
 RUN mkdir ceres-bin
 WORKDIR /ceres-bin
 RUN cmake ../ceres-solver-2.1.0
-RUN make -j8
+RUN make -j4
 RUN make install
 
 RUN pip3 install numpy --upgrade
