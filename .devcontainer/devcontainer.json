@@ -22,6 +22,7 @@
     "runArgs": [
         "--net=host",
         "--privileged",
-        "-e", "DISPLAY=${env:DISPLAY}"
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
     ],
 }

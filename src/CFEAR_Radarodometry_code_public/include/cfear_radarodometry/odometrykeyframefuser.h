@@ -129,7 +129,7 @@ public:
       param_nh.param<bool>("use_raw_pointcloud", use_raw_pointcloud, false);
       param_nh.param<int>("submap_scan_size", submap_scan_size, 3);
 
-      param_nh.param<double>("res", res, 3.0);
+      param_nh.param<double>("res", res, 1.0);
       double d_factor;
       param_nh.param<double>("downsample_factor", d_factor, 1);
       MapPointNormal::downsample_factor = d_factor;

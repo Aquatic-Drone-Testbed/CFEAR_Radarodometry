@@ -30,7 +30,7 @@ OdometryKeyframeFuser::OdometryKeyframeFuser(const Parameters& pars, bool disabl
                                                                                               par.weight_opt));
 
   radar_reg->SetD2dPar(par.covar_scale_,par.regularization_);
-
+    
   Tprev_fused = Eigen::Affine3d::Identity();
   Tcurrent = Eigen::Affine3d::Identity();
   cov_current = Covariance::Identity();
