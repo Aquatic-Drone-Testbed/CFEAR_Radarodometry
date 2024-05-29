@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="USV_tf2" type="dynamic_tf_broadcaster.py" name="dynamic_tf_broadcaster" output="screen"/>
-</launch>

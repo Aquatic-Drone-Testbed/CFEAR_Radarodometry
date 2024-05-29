@@ -1,0 +1,20 @@
+<launch>
+   <!-- Start the EKF node -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_node" output="screen">
+    <rosparam command="load" file="$(find robot_description)/config/robot_localization_example.yaml"/>
+  </node>
+  
+  <!-- Start RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_description)/rviz/robot.rviz"/>
+
+  <!-- Load the URDF file -->
+  <!-- param name="robot_description" command="$(find xacro)/xacro $(find robot_description)/urdf/robot.urdf.xacro"/-->
+
+  <!-- Start the robot_state_publisher -->
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
+
+  <!-- Start the NavSat transform node -->
+  <!-- <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" output="screen">
+    <param name="config" value="$(find robot_description)/config/robot_localization_example.yaml"/>
+  </node> -->
+</launch>

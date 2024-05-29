@@ -1,0 +1,52 @@
+
+debug: true
+debug_out_file: /root/catkin_ws/src/robot_description/ekf_debug_file.txt
+
+frequency: 30
+sensor_timeout: 0.1
+two_d_mode: false
+publish_tf: true
+
+odom_frame: odom
+base_link_frame: base_link
+world_frame: odom  # Changed to 'map' to ensure consistency with the 'map_frame'
+map_frame: map
+
+odom0: /cfear_radarodometry_node/radar_odom
+odom0_config: [true,  true,  true,    # Position (x, y, z)
+                false, false, false,   # Orientation (x, y, z) - assuming the radar doesn't provide orientation
+                true, true, true,   # Linear velocity (x, y, z)
+                false, false, true,    # Angular velocity (x, y, z) - assuming the radar provides yaw rate
+                false, false, false]   # Linear acceleration (x, y, z)
+
+imu0: /bno055/imu
+imu0_config: [false, false, false,    # Position (x, y, z)
+              true,  true,  true,     # Orientation (x, y, z)
+              false, false, false,    # Linear velocity (x, y, z)
+              true,  true,  true,     # Angular velocity (x, y, z)
+              true, true, true]    # Linear acceleration (x, y, z)
+
+imu0_differential: false
+imu0_relative: true
+
+use_control: false
+stamped_control: false
+
+
+# navsat_transform:
+#   frequency: 10
+#   delay: 0
+#   magnetic_declination_radians: 0.0
+#   yaw_offset: 0.0
+#   zero_altitude: false
+#   broadcast_utm_transform: true
+#   broadcast_wgs84_transform: false
+#   use_odometry_yaw: false
+
+#   odom_frame: odom
+#   base_link_frame: base_link
+#   world_frame: map
+
+#   odom0: /odom
+#   gps0: /gps/fix
+#   gps0_queue_size: 10
