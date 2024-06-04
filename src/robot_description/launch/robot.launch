@@ -5,7 +5,7 @@
   </node>
   
   <!-- Start RViz -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_description)/rviz/robot.rviz"/>
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_description)/rviz/robot.rviz"/> -->
 
   <!-- Load the URDF file -->
   <!-- param name="robot_description" command="$(find xacro)/xacro $(find robot_description)/urdf/robot.urdf.xacro"/-->

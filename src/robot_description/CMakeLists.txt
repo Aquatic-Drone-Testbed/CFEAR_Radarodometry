@@ -115,7 +115,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES robot_description
-#  CATKIN_DEPENDS geometry_msgs nav_msgs robot_localization robot_state_publisher roscpp rospy rviz sensor_msgs std_msgs tf xacro
+ CATKIN_DEPENDS geometry_msgs nav_msgs robot_localization robot_state_publisher roscpp rospy rviz sensor_msgs std_msgs tf xacro
 #  DEPENDS system_lib
 )
 
