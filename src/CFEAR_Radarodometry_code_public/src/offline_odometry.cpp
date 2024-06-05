@@ -64,7 +64,7 @@ public:
     rosbag::Bag bag;
     bag.open(p.bag_file_path, rosbag::bagmode::Read);
 
-    std::vector<std::string> topics = {"/Navtech/Polar","/gt"};
+    std::vector<std::string> topics = {"/USV/Polar","/gt"};
     rosbag::View view(bag, rosbag::TopicQuery(topics));
 
     int frame = 0;
@@ -119,7 +119,7 @@ public:
         ros::Duration d = ros::Duration(tnow-tinit);
         static ros::Duration tot(0);
         tot +=d;
-        //usleep(100*1000);
+        usleep(300*1000);
 
 
         cout<<"Frame: "<<frame<<", dur: "<<d<<", avg: "<<++frame/tot.toSec()<<endl;

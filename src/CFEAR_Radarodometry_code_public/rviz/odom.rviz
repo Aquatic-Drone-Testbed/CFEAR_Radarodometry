@@ -78,7 +78,7 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 1
+      Size (Pixels): 3
       Size (m): 0.05000000074505806
       Style: Points
       Topic: /cfear_radarodometry_node/radar_registered
@@ -136,17 +136,17 @@ Visualization Manager:
       Enabled: true
       Keep: 100000
       Name: Estimated - Odometry
-      Position Tolerance: 0.5
+      Position Tolerance: 0.000000001
       Queue Size: 10
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
         Color: 255; 25; 0
-        Head Length: 1
-        Head Radius: 2
-        Shaft Length: 1
-        Shaft Radius: 1
+        Head Length: 5
+        Head Radius: 5
+        Shaft Length: 15
+        Shaft Radius: 3
         Value: Arrow
       Topic: /cfear_radarodometry_node/radar_odom
       Unreliable: true

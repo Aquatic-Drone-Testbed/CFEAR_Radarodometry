@@ -29,9 +29,9 @@ radarDriver::radarDriver(const Parameters& pars, bool disable_callback):par(pars
 
   if(!disable_callback){
     if(par.dataset=="oxford")
-      sub = nh_.subscribe<sensor_msgs::Image>("/Navtech/Polar", 1000, &radarDriver::CallbackOxford, this);
+      sub = nh_.subscribe<sensor_msgs::Image>("/USV/Polar", 1000, &radarDriver::CallbackOxford, this);
     else
-      sub = nh_.subscribe<sensor_msgs::Image>("/Navtech/Polar", 1000, &radarDriver::Callback, this);
+      sub = nh_.subscribe<sensor_msgs::Image>("/USV/Polar", 1000, &radarDriver::Callback, this);
   }
 }
 
