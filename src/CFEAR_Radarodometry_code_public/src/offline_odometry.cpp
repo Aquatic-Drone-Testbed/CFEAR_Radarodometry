@@ -119,7 +119,8 @@ public:
         ros::Duration d = ros::Duration(tnow-tinit);
         static ros::Duration tot(0);
         tot +=d;
-        usleep(300*1000);
+        // usleep(2.7*1000000);
+        usleep(0.33*1000000);
 
 
         cout<<"Frame: "<<frame<<", dur: "<<d<<", avg: "<<++frame/tot.toSec()<<endl;

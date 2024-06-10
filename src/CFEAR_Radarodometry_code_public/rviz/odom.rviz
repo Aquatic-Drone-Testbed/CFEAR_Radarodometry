@@ -143,10 +143,10 @@ Visualization Manager:
         Axes Length: 1
         Axes Radius: 0.10000000149011612
         Color: 255; 25; 0
-        Head Length: 5
-        Head Radius: 5
-        Shaft Length: 15
-        Shaft Radius: 3
+        Head Length: 3
+        Head Radius: 3
+        Shaft Length: 8
+        Shaft Radius: 1
         Value: Arrow
       Topic: /cfear_radarodometry_node/radar_odom
       Unreliable: true
