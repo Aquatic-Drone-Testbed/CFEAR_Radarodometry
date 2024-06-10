@@ -17,8 +17,9 @@ EVALUATION_description="cfear-x"
 #BAG_FILE_PATH="${BAG_BASE_PATH}/2019-01-16-11-53-11-radar-oxford-10k.bag" #can changed to any location
 
 #For2019-01-10-12-32-52-radar-oxford-10k
-BAG_BASE_PATH="/home/${USER}/Documents/oxford-eval-sequences/2019-01-10-12-32-52-radar-oxford-10k/" #Must be set, will contain the output of the odometry
-BAG_FILE_PATH="${BAG_BASE_PATH}/2019-01-10-12-32-52-radar-oxford-10k.bag" #can changed to any location
+BAG_BASE_PATH="/root/catkin_ws/bag" #Must be set, will contain the output of the odometry
+# BAG_FILE_PATH="${BAG_BASE_PATH}/oxford-eval-sequences/2019-01-10-12-32-52-radar-oxford-10k/radar/2019-01-10-12-32-52-radar-oxford-10k.bag" #can changed to any location
+BAG_FILE_PATH="${BAG_BASE_PATH}/lagoon_may29.bag" #can changed to any location
 
 echo "Bag file: ${BAG_FILE_PATH}"
 EVAL_BASE_DIR="${BAG_BASE_PATH}/eval/${current_date}"
@@ -33,7 +34,7 @@ mkdir -p "${gt_dir}"
 export cost_type="P2P"
 export submap_scan_size="4"
 export registered_min_keyframe_dist="1.5"
-export res="3"
+export res="330"
 export kstrong="40"
 export zmin="60"
 export weight_option="4"
@@ -71,11 +72,11 @@ export weight_intensity="true"
 #export LOSS_TYPE="Cauchy" # comment out Huber below (line 79)
 
 # OTHER PARAMETERS #
-export range_res="0.0438"
+export range_res="6"
 export radar_ccw="false" #False for oxford, otherwise true
 export soft_constraint="false"
 export disable_compensate="false"
-export dataset="oxford"
+export dataset="usv"
 export LOSS_TYPE="Huber" #export LOSS_TYPE="Cauchy" # Cauchy prefered to Huber for drift and accuracy
 export LOSS_LIMIT="0.1"
 
